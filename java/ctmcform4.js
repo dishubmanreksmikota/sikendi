@@ -1,13 +1,25 @@
 
-let MOTOR = document.querySelector("#qtyInputMotor");
-let MOBIL = document.querySelector("#qtyInputMobil");
-let MPU = document.querySelector("#qtyInputMPU");
-let PICKUP = document.querySelector("#qtyInputPICKUP");
+let MOTORKIRI = document.querySelector("#qtyInputMotorKIRI");
+let MOTORLURUS = document.querySelector("#qtyInputMotorLURUS");
+let MOTORKANAN = document.querySelector("#qtyInputMotorKANAN");
+let MOBILKIRI = document.querySelector("#qtyInputMobilKIRI");
+let MOBILLURUS = document.querySelector("#qtyInputMobilLURUS");
+let MOBILKANAN = document.querySelector("#qtyInputMobilKANAN");
+let MPUKIRI = document.querySelector("#qtyInputMpuKIRI");
+let MPULURUS = document.querySelector("#qtyInputMpuLURUS");
+let MPUKANAN = document.querySelector("#qtyInputMpuKANAN");
+let PICKUPKIRI = document.querySelector("#qtyInputPickupKIRI");
+let PICKUPLURUS = document.querySelector("#qtyInputPickupLURUS");
+let PICKUPKANAN = document.querySelector("#qtyInputPickupKANAN");
 let BOX = document.querySelector("#qtyInputMOBILBOX");
 let BUS_KECIL = document.querySelector("#qtyInputBUS_KECIL");
-let TRUK_KECIL = document.querySelector("#qtyInputTRUK_KECIL");
+let TRUK_KECILKIRI = document.querySelector("#qtyInputTrukkecilKIRI");
+let TRUK_KECILLURUS = document.querySelector("#qtyInputTrukkecilLURUS");
+let TRUK_KECILKANAN = document.querySelector("#qtyInputTrukkecilKANAN");
 let BUS_BESAR = document.querySelector("#qtyInputBUS_BESAR");
-let TRUK_BESAR = document.querySelector("#qtyInputTRUK_BESAR");
+let TRUK_BESARKIRI = document.querySelector("#qtyInputTrukbesarKIRI");
+let TRUK_BESARLURUS = document.querySelector("#qtyInputTrukbesarLURUS");
+let TRUK_BESARKANAN = document.querySelector("#qtyInputTrukbesarKANAN");
 let TRUK_TANGKI = document.querySelector("#qtyInputTRUK_TANGKI");
 let UM = document.querySelector("#qtyInputUM");
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyXpvu5SmUsdttTm6QYQv2bv0lRL1hu-bP3W8HkKYlUp-1vzKi4su5CiXV80RBHt5SBwQ/exec'
@@ -33,16 +45,38 @@ function decrementTRUK_TANGKI(){
 function incrementTRUK_TANGKI(){
     TRUK_TANGKI.value = parseInt(TRUK_TANGKI.value) + 1;
 }
-function decrementTRUK_BESAR(){
-    if (TRUK_BESAR.value <=0){
-        TRUK_BESAR.value = 0;
+
+function decrementtrukbesarKIRI(){
+    if (TRUK_BESARKIRI.value <=0){
+        TRUK_BESARKIRI.value = 0;
     } else {
-        TRUK_BESAR.value = parseInt(TRUK_BESAR.value) - 1;
+        TRUK_BESARKIRI.value = parseInt(TRUK_BESARKIRI.value) - 1;
     }
 }
-function incrementTRUK_BESAR(){
-    TRUK_BESAR.value = parseInt(TRUK_BESAR.value) + 1;
+function incrementtrukbesarKIRI(){
+    TRUK_BESARKIRI.value = parseInt(TRUK_BESARKIRI.value) + 1;
 }
+function decrementtrukbesarLURUS(){
+    if (TRUK_BESARLURUS.value <=0){
+        TRUK_BESARLURUS.value = 0;
+    } else {
+        TRUK_BESARLURUS.value = parseInt(TRUK_BESARLURUS.value) - 1;
+    }
+}
+function incrementtrukbesarLURUS(){
+    TRUK_BESARLURUS.value = parseInt(TRUK_BESARLURUS.value) + 1;
+}
+function decrementtrukbesarKANAN(){
+    if (TRUK_BESARKANAN.value <=0){
+        TRUK_BESARKANAN.value = 0;
+    } else {
+        TRUK_BESARKANAN.value = parseInt(TRUK_BESARKANAN.value) - 1;
+    }
+}
+function incrementtrukbesarKANAN(){
+    TRUK_BESARKANAN.value = parseInt(TRUK_BESARKANAN.value) + 1;
+}
+
 function decrementBUS_BESAR(){
     if (BUS_BESAR.value <=0){
         BUS_BESAR.value = 0;
@@ -52,57 +86,164 @@ function decrementBUS_BESAR(){
 }
 function incrementBUS_BESAR(){
     BUS_BESAR.value = parseInt(BUS_BESAR.value) + 1;
+
 }
-function decrementTRUK_KECIL(){
-    if (TRUK_KECIL.value <=0){
-        TRUK_KECIL.value = 0;
+
+function decrementtrukkecilKIRI(){
+    if (TRUK_KECILKIRI.value <=0){
+        TRUK_KECILKIRI.value = 0;
     } else {
-        TRUK_KECIL.value = parseInt(TRUK_KECIL.value) - 1;
+        TRUK_KECILKIRI.value = parseInt(TRUK_KECILKIRI.value) - 1;
     }
 }
-function incrementTRUK_KECIL(){
-    TRUK_KECIL.value = parseInt(TRUK_KECIL.value) + 1;
+function incrementtrukkecilKIRI(){
+    TRUK_KECILKIRI.value = parseInt(TRUK_KECILKIRI.value) + 1;
 }
-function decrementmotor(){
-    if (MOTOR.value <=0){
-        MOTOR.value = 0;
+function decrementtrukkecilLURUS(){
+    if (TRUK_KECILLURUS.value <=0){
+        TRUK_KECILLURUS.value = 0;
     } else {
-        MOTOR.value = parseInt(MOTOR.value) - 1;
+        TRUK_KECILLURUS.value = parseInt(TRUK_KECILLURUS.value) - 1;
     }
 }
-function incrementmotor(){
-    MOTOR.value = parseInt(MOTOR.value) + 1;
+function incrementtrukkecilLURUS(){
+    TRUK_KECILLURUS.value = parseInt(TRUK_KECILLURUS.value) + 1;
 }
-function decrementmobil(){
-    if (MOBIL.value <=0){
-        MOBIL.value = 0;
+function decrementtrukkecilKANAN(){
+    if (TRUK_KECILKANAN.value <=0){
+        TRUK_KECILKANAN.value = 0;
     } else {
-        MOBIL.value = parseInt(MOBIL.value) - 1;
+        TRUK_KECILKANAN.value = parseInt(TRUK_KECILKANAN.value) - 1;
     }
 }
-function incrementmobil(){
-    MOBIL.value = parseInt(MOBIL.value) + 1;
+function incrementtrukkecilKANAN(){
+    TRUK_KECILKANAN.value = parseInt(TRUK_KECILKANAN.value) + 1;
 }
-function decrementmpu(){
-    if (MPU.value <=0){
-        MPU.value = 0;
+
+function decrementmotorKIRI(){
+    if (MOTORKIRI.value <=0){
+        MOTORKIRI.value = 0;
     } else {
-        MPU.value = parseInt(MPU.value) - 1;
+        MOTORKIRI.value = parseInt(MOTORKIRI.value) - 1;
     }
 }
-function incrementmpu(){
-    MPU.value = parseInt(MPU.value) + 1;
+function incrementmotorKIRI(){
+    MOTORKIRI.value = parseInt(MOTORKIRI.value) + 1;
 }
-function decrementpickup(){
-    if (PICKUP.value <=0){
-        PICKUP.value = 0;
+function decrementmotorLURUS(){
+    if (MOTORLURUS.value <=0){
+        MOTORLURUS.value = 0;
     } else {
-        PICKUP.value = parseInt(PICKUP.value) - 1;
+        MOTORLURUS.value = parseInt(MOTORLURUS.value) - 1;
     }
 }
-function incrementpickup(){
-    PICKUP.value = parseInt(PICKUP.value) + 1;
+function incrementmotorLURUS(){
+    MOTORLURUS.value = parseInt(MOTORLURUS.value) + 1;
 }
+function decrementmotorKANAN(){
+    if (MOTORKANAN.value <=0){
+        MOTORKANAN.value = 0;
+    } else {
+        MOTORKANAN.value = parseInt(MOTORKANAN.value) - 1;
+    }
+}
+function incrementmotorKANAN(){
+    MOTORKANAN.value = parseInt(MOTORKANAN.value) + 1;
+}
+// ------------------
+function decrementmobilKIRI(){
+    if (MOBILKIRI.value <=0){
+        MOBILKIRI.value = 0;
+    } else {
+        MOBILKIRI.value = parseInt(MOBILKIRI.value) - 1;
+    }
+}
+function incrementmobilKIRI(){
+    MOBILKIRI.value = parseInt(MOBILKIRI.value) + 1;
+}
+function decrementmobilLURUS(){
+    if (MOBILLURUS.value <=0){
+        MOBILLURUS.value = 0;
+    } else {
+        MOBILLURUS.value = parseInt(MOBILLURUS.value) - 1;
+    }
+}
+function incrementmobilLURUS(){
+    MOBILLURUS.value = parseInt(MOBILLURUS.value) + 1;
+}
+function decrementmobilKANAN(){
+    if (MOBILKANAN.value <=0){
+        MOBILKANAN.value = 0;
+    } else {
+        MOBILKANAN.value = parseInt(MOBILKANAN.value) - 1;
+    }
+}
+function incrementmobilKANAN(){
+    MOBILKANAN.value = parseInt(MOBILKANAN.value) + 1;
+}
+
+function decrementmpuKIRI(){
+    if (MPUKIRI.value <=0){
+        MPUKIRI.value = 0;
+    } else {
+        MPUKIRI.value = parseInt(MPUKIRI.value) - 1;
+    }
+}
+function incrementmpuKIRI(){
+    MPUKIRI.value = parseInt(MPUKIRI.value) + 1;
+}
+function decrementmpuLURUS(){
+    if (MPULURUS.value <=0){
+        MPULURUS.value = 0;
+    } else {
+        MPULURUS.value = parseInt(MPULURUS.value) - 1;
+    }
+}
+function incrementmpuLURUS(){
+    MPULURUS.value = parseInt(MPULURUS.value) + 1;
+}
+function decrementmpuKANAN(){
+    if (MPUKANAN.value <=0){
+        MPUKANAN.value = 0;
+    } else {
+        MPUKANAN.value = parseInt(MPUKANAN.value) - 1;
+    }
+}
+function incrementmpuKANAN(){
+    MPUKANAN.value = parseInt(MPUKANAN.value) + 1;
+}
+
+function decrementpickupKIRI(){
+    if (PICKUPKIRI.value <=0){
+        PICKUPKIRI.value = 0;
+    } else {
+        PICKUPKIRI.value = parseInt(PICKUPKIRI.value) - 1;
+    }
+}
+function incrementpickupKIRI(){
+    PICKUPKIRI.value = parseInt(PICKUPKIRI.value) + 1;
+}
+function decrementpickupLURUS(){
+    if (PICKUPLURUS.value <=0){
+        PICKUPLURUS.value = 0;
+    } else {
+        PICKUPLURUS.value = parseInt(PICKUPLURUS.value) - 1;
+    }
+}
+function incrementpickupLURUS(){
+    PICKUPLURUS.value = parseInt(PICKUPLURUS.value) + 1;
+}
+function decrementpickupKANAN(){
+    if (PICKUPKANAN.value <=0){
+        PICKUPKANAN.value = 0;
+    } else {
+        PICKUPKANAN.value = parseInt(PICKUPKANAN.value) - 1;
+    }
+}
+function incrementpickupKANAN(){
+    PICKUPKANAN.value = parseInt(PICKUPKANAN.value) + 1;
+}
+
 function decrementmobilbox(){
     if (BOX.value <=0){
         BOX.value = 0;
@@ -124,9 +265,22 @@ function incrementBUS_KECIL(){
     BUS_KECIL.value = parseInt(BUS_KECIL.value) + 1;
 }
 form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, {method: 'POST', body: new FormData(form)})
-    .then(response => alert("Terima Kasih! Data Telah Terinput"))
-    .then(() => { window.location.reload(); })
-    .catch(error => console.error('Error!', error.message))
-})
+    e.preventDefault();
+    
+    // Inisialisasi dan tampilkan modal loading secara programmatic
+    const modalElement = document.getElementById('loadingModal');
+    const loadingModal = new bootstrap.Modal(modalElement);
+    loadingModal.show();
+
+    // Kirim data ke Google Sheets via fetch
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+        // Berhasil terkirim, langsung muat ulang halaman ke kondisi awal (nol)
+        window.location.reload();
+    })
+    .catch(error => {
+        loadingModal.hide();
+        console.error('Error!', error.message);
+        alert('Terjadi kesalahan saat mengirim data. Silakan coba lagi.');
+    });
+});
